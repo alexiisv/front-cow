@@ -9,10 +9,12 @@ function Layout () {
       <div className='min-h-screen'>
         <Menu />
 
-        <div className='py-4 px-6 xl:px-0 xl:pr-6 xl:pl-4 xl:ml-80'>
-          <Navbar />
+        <div className='justify-center items-center py-4 px-6 xl:px-0 xl:pr-6 xl:pl-4 xl:ml-80'>
+          <div className='container mx-auto'>
+            <Navbar />
 
-          <Outlet />
+            <Outlet />
+          </div>
         </div>
       </div>
     </LayoutProvider>
