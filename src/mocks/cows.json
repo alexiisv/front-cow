@@ -3,12 +3,12 @@
     "id": 1,
     "name": "Lola",
     "description": "Lola is a 3 year old", 
-    "img": "@/assets/cows/lola.webp"
+    "img": "https://raw.githubusercontent.com/alexiisv/front-cow/main/src/assets/cows/betsy.webp"
   },
   {
     "id": 2,
     "name": "Betsy",
     "description": "Betsy is a 2 year old",
-    "img": "@/assets/cows/betsy.webp"
+    "img": "https://raw.githubusercontent.com/alexiisv/front-cow/main/src/assets/cows/lola.webp"
   }
 ]

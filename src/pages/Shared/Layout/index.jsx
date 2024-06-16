@@ -10,7 +10,7 @@ function Layout () {
         <Menu />
 
         <div className='justify-center items-center py-4 px-6 xl:px-0 xl:pr-6 xl:pl-4 xl:ml-80'>
-          <div className='container mx-auto'>
+          <div className='container max-w-6xl mx-auto'>
             <Navbar />
 
             <Outlet />
