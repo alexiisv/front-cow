@@ -6,7 +6,7 @@ function Graph () {
 
   return (
     <div>
-      {id} - {property}
+      <h2 className='text-xl font-bold mb-4'>{property}</h2>
       <LinesChart id={id} property={property} />
     </div>
   )
