@@ -6,20 +6,20 @@ export function diffDateString (date1, date2) {
   const diffDays = diffHours / 24
 
   if (diffSeconds < 60) {
-    return 'Hace unos segundos'
+    return 'Just now'
   }
 
   if (diffMinutes < 60) {
-    return `Hace ${Math.floor(diffMinutes)} minutos`
+    return `${Math.floor(diffMinutes)} minutes ago`
   }
 
   if (diffHours < 24) {
-    return `Hace ${Math.floor(diffHours)} horas`
+    return `${Math.floor(diffHours)} hours ago`
   }
 
   if (diffDays < 7) {
-    return `Hace ${Math.floor(diffDays)} días`
+    return `${Math.floor(diffDays)} days ago`
   }
 
-  return `Hace ${Math.floor(diffDays / 7)} semanas`
+  return `${Math.floor(diffDays / 7)} weeks ago`
 }

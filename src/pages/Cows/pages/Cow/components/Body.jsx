@@ -9,10 +9,10 @@ function Body ({ dataCollar }) {
   return (
     <div className='flex flex-col'>
       <div className='flex justify-between mb-2 items-end'>
-        <h6 className='font-semibold text-lg'>Sensores</h6>
+        <h6 className='font-semibold text-lg'>Sensors</h6>
 
         <div className='flex flex-col text-sm text-right'>
-          <span>Ultima actualizacion</span>
+          <span>Last update</span>
           <span className='-mt-1 font-bold'>{diffDateString(currentDate, lastUpdate)}</span>
         </div>
       </div>
