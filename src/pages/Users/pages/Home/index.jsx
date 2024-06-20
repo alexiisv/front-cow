@@ -33,12 +33,14 @@ function Home () {
         </Link>
       </div>
 
-      <div className=''>
-        <TableUsers
-          users={users}
-          editUser={handleEditUser}
-          deleteUser={handleDeleteUser}
-        />
+      <div>
+        {users.length > 0 && (
+          <TableUsers
+            users={users}
+            editUser={handleEditUser}
+            deleteUser={handleDeleteUser}
+          />
+        )}
       </div>
     </div>
   )
