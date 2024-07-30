@@ -10,6 +10,11 @@ export async function currentDateToSelected (date) {
   return axios.get(`${URL_API}/collares/currentDateToSelected/${date}`)
 }
 
+export async function getForLastHours (id, prop, hours) {
+  const query = `?aidCow=${id}&hours=${hours}&prop=${prop}`
+  return axios.get(`${URL_API}/collares/getForLastHours${query}`)
+}
+
 export async function lastThirtyDays (id, prop) {
   return axios.get(`${URL_API}/collares/lastThirtyDays/${id}/${prop}`)
 }

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
@@ -11,7 +10,6 @@ import {
   Legend,
   Filler
 } from 'chart.js'
-import { lastThirtyDays } from '@/services/collares.service'
 
 ChartJS.register(
   CategoryScale,
@@ -33,27 +31,7 @@ const chartOptions = {
   slices: 5
 }
 
-function LinesChart ({ id, property }) {
-  const [dataPoints, setDataPoints] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    getCurrentDateToSelected()
-  }, [id])
-
-  const getCurrentDateToSelected = async () => {
-    setLoading(true)
-    try {
-      const response = await lastThirtyDays(id, property)
-      console.log(response.data)
-      setDataPoints(response.data)
-    } catch (error) {
-      console.log('Error fetching collar data: ', error)
-    } finally {
-      setLoading(false)
-    }
-  }
-
+function LinesChart ({ dataPoints, property }) {
   const chartData = {
     labels: dataPoints.map(point => point.timestamp),
     datasets: [
@@ -66,8 +44,6 @@ function LinesChart ({ id, property }) {
       }
     ]
   }
-
-  if (loading) return <p>Loading...</p>
 
   return <Line data={chartData} options={chartOptions} />
 }
