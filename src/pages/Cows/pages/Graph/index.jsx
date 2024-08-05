@@ -35,13 +35,13 @@ function Graph () {
     <div>
       <div className='flex items-center justify-between mb-4'>
         <h2 className='text-xl font-bold'>{property}</h2>
-        <div className='max-w-64 flex gap-4 items-center'>
-          <span>{currentDate}</span>
+        <div className='flex gap-4 items-center'>
+          <span className='w-28'>{currentDate}</span>
           <select
             id='time'
             value={timeline}
             onChange={(event) => setTimeline(event.target.value)}
-            className='bg-slate-50 py-1 px-2 border border-slate-300 text-sm rounded-lg hover:bg-slate-50 focus:bg-slate-50 focus:ring-slate-500 focus:border-slate-500 block w-full focus:outline-none transition duration-150 ease-in-out'
+            className='max-w-64 bg-slate-50 py-1 px-2 border border-slate-300 text-sm rounded-lg hover:bg-slate-50 focus:bg-slate-50 focus:ring-slate-500 focus:border-slate-500 block w-full focus:outline-none transition duration-150 ease-in-out'
           >
             <option value='1'>Last hour</option>
             <option value='6'>Last 6 hours</option>
