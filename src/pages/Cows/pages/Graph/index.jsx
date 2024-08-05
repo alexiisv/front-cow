@@ -36,7 +36,7 @@ function Graph () {
       <div className='flex items-center justify-between mb-4'>
         <h2 className='text-xl font-bold'>{property}</h2>
         <div className='flex gap-4 items-center'>
-          <span className='w-28'>{currentDate}</span>
+          <span className='w-full'>{currentDate}</span>
           <select
             id='time'
             value={timeline}
