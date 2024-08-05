@@ -48,15 +48,6 @@ function Edit () {
             setValue={setEmail}
           />
 
-          <Input
-            id='password'
-            label='New password'
-            type='password'
-            placeholder='Enter new password'
-            value={password}
-            setValue={setPassword}
-          />
-
           <div>
             <label
               className='mb-1 block text-sm font-semibold'

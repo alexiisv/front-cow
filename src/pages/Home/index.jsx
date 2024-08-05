@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import LoadingPage from '../../components/LoadingPage'
+import { FaYoutube } from 'react-icons/fa6'
 
 function Home () {
   const [loading, setLoading] = useState(true)
@@ -34,9 +35,10 @@ function Home () {
       {loading && <LoadingPage />}
       <div className={`content ${loadedCount < images.length ? 'hidden' : ''}`}>
         <div className='bg-white rounded-xl shadow p-4 border-slate-600/20 mb-4 flex flex-row gap-28'>
-          <div>
-            <h2 className='text-xl font-semibold mb-2'>Cows Udenar</h2>
-            <p className='mb-4'>dispositivo electrónico para la detección del celo en bobinos, mide más de 10 variables fisiologicas como fisicas. Presenta gran capacidad de cobertura y un diseño robusto para funcionar de manera óptima bajo exposición constante al sol y al agua durante 24 horas, garantizando una monitorización precisa y continua para una gestión reproductiva eficiente del ganado bovino.</p>
+          <div className='px-4'>
+            <h2 className='text-6xl text-center font-semibold mb-2'>Cows Udenar</h2>
+            <p className='mt-6 mb-4'>dispositivo electrónico para la detección del celo en bobinos, mide más de 10 variables fisiologicas como fisicas. Presenta gran capacidad de cobertura y un diseño robusto para funcionar de manera óptima bajo exposición constante al sol y al agua durante 24 horas, garantizando una monitorización precisa y continua para una gestión reproductiva eficiente del ganado bovino.</p>
+            <a href='https://www.youtube.com/@Cowudenar' target='_blank' className='flex items-center gap-2 underline font-bold' rel='noreferrer'>Ver videos<FaYoutube className='text-red-600 h-6 w-6 mt-1' /></a>
           </div>
           <img
             className='rounded-lg max-w-sm'

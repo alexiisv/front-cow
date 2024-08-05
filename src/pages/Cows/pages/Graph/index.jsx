@@ -10,6 +10,8 @@ function Graph () {
   const [loading, setLoading] = useState(true)
   const [dataPoints, setDataPoints] = useState([])
 
+  const currentDate = new Date().toISOString().split('T')[0]
+
   useEffect(() => {
     console.log('timeline onCange', timeline)
 
@@ -33,7 +35,8 @@ function Graph () {
     <div>
       <div className='flex items-center justify-between mb-4'>
         <h2 className='text-xl font-bold'>{property}</h2>
-        <div className='max-w-48'>
+        <div className='max-w-64 flex gap-4 items-center'>
+          <span>{currentDate}</span>
           <select
             id='time'
             value={timeline}
